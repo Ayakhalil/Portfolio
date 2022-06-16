@@ -1,0 +1,610 @@
+/*google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+
+/*GENERAL SETTINGS*/
+:root{
+	/*colors*/
+	--orange:#F05945;
+	--beige:#F7F3E9;
+	--lightTeal:#A3D2CA;
+	--darkTeal:#5EAAA8;
+}
+
+*{
+	/*this makes it compatible on various browsers*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+
+}
+
+body{
+	font-family: 'Nunito', sans-serif;
+	font-size: 70%;
+	background-color: var(--beige);
+}
+
+ul{
+	list-style: none;
+}
+/*HEADER*/
+header{
+	/*margin-inline:100px; */
+	
+}
+
+#logo{
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: rgba(0,0,0, .8);
+	cursor: pointer;
+}
+
+nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+	margin: auto;
+	width: 85%;
+}
+
+nav ul li{
+	display: inline-block;
+	font-size: 1.1rem;
+	margin:0 30px;
+	position: relative;
+}
+
+#nav .current{
+	border-bottom: 3px solid var(--orange);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 50px;
+  width:50px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.6);
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 30px;
+  color: var(--orange);
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 30px;
+  color: var(--orange);
+  
+}
+
+/*this adds an add orange line under the nav on mouse hover*/
+nav ul li::after{
+	content: '';
+	background: var(--orange);
+	height: 2px;
+	width: 0%;
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	transition: .5s;
+
+}
+nav ul li a{
+	text-decoration: none !important;
+	color: rgba(0,0,0, .8) !important;
+	text-transform: capitalize;
+}
+/*on hover the orange line grows from the left*/
+nav ul li:hover::after{
+	width: 100%;
+}
+
+#welcome{
+	text-align: center;
+	margin:10em 0;
+}
+
+#welcome h1{
+	font-size: 4rem;
+	text-transform: uppercase;
+	font-weight: 200;
+	color: rgba(0,0,0,.8);
+}
+
+#welcome h1 span{
+	font-weight: 600;
+}
+
+#welcome p{
+	font-size: 1.1rem;
+	color: rgba(0,0,0, .6);
+	width: 45%;
+	margin: auto;
+	padding: 30px 0;
+}
+
+#welcome p span{
+	text-transform: uppercase;
+}
+
+#welcome button{
+	height: 45px;
+	width: 120px;
+	background: var(--orange);
+	border:none;
+	border-radius: 4px;
+	box-shadow: 1px 1px 3px rgba(0,0,0, .6);
+}
+
+#welcome button a{
+ 		text-transform: uppercase;
+ 		text-decoration: none;
+ 		color: #fff;
+}
+
+.whiteBg{
+	/*height: 400px;*/
+	max-height: 100%;
+	background: #f9f9f9;
+	/*box-shadow: inset 0px .1px 5px rgba(0,0,0, .1) , 0px -.1px 5px rgba(0,0,0, .1);*/
+
+
+}
+
+#aboutSection{
+	width: 85%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	align-items: center;
+	padding: 10em 0;
+	
+}
+
+ h3{
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		text-align: left;
+		color: rgba(0,0,0,.8);
+
+}
+
+#text p{
+	font-size: 1.1rem;
+	color:rgba(0,0,0, .6);
+	padding: 30px 0;
+	text-align: left;
+	width: 75%;
+}
+
+#text button{
+	text-transform: uppercase;
+	height: 45px;
+	width: 120px;
+	background: var(--orange);
+	border: none;
+	border-radius: 4px;
+	box-shadow: 1px 1px 3px rgba(0,0,0, .6);
+	/*text-align: left;*/
+
+}
+
+#text button a{
+	color: #fff;
+	text-decoration: none;
+}
+
+#img img{
+	padding-right: 0;
+	border-radius: 8px;
+	width: 300px;  
+    height: 350px;  
+}
+
+
+
+.skillsGrid{
+	width: 85%;
+	margin: auto;
+	padding-bottom: 10em;
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	justify-content: center;
+	grid-row-gap: 40px;
+
+	grid-column-gap: 20%;
+}
+
+.skills{
+	font-size: 1.1rem;
+	
+}
+
+.skills p{
+	padding-bottom: 15px;
+	text-transform: capitalize;
+	color: rgba(0,0,0,.3);
+}
+
+.skillBar{
+	width: 450px;
+	padding:0;
+	color: #fff;
+	border-radius: 4px;
+	text-align: right;
+	box-shadow: 1px 1px 3px rgba(0,0,0,.2), -1px -1px 3px rgba(0,0,0,.2);
+}
+
+#Python{
+	background: var(--darkTeal);
+	width: 90%;
+	font-size: .8rem;
+	padding-right: 4px;
+	border-radius: 4px;
+}
+
+#frontEnd{
+	background: var(--darkTeal);
+	width: 70%;
+	font-size: .8rem;
+	padding-right: 4px;
+	border-radius: 4px;
+}
+
+/*project*/
+#projectsDiv{
+	width: 85%;
+	margin: auto;
+	padding-top: 10em;
+	padding-bottom: 5em;
+}
+
+h4{
+	text-transform: uppercase;
+	font-weight: 200;
+	font-size: 1.19rem;
+	padding-bottom: 15px;
+	padding-top: 30px;
+}
+
+#projectsDiv ul li{
+	font-size: 1.1rem;
+	color: rgba(0,0,0, .6);
+	padding-bottom: 15px;
+}
+
+#justPictures{
+	width: 85%;
+	margin-inline: auto;
+	padding-bottom: 10em;
+}
+
+/*work*/
+#work{
+	width: 85%;
+	margin: auto;
+	padding-top: 10em;
+}
+
+#workGrid{
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	grid-column-gap: 30px;
+	padding-bottom: 10em;
+}
+.workGridChild h5{
+		font-size: 1.19rem;
+		text-transform: capitalize;
+		text-align: left;
+		color: rgba(0,0,0,.8);
+		padding-top: 30px;
+		padding-bottom: 15px;
+}
+
+
+.workGridChild ul li{
+	font-size: 1.1rem;
+	color: rgba(0,0,0, .6);
+	padding-bottom: 15px;
+	}
+
+#contact{
+		padding: 10em 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+}
+
+#contact form h3{
+	font-size: 1.3rem;
+	color: rgba(0,0,0, .6);
+	padding-bottom: 15px;
+}
+#contact form input{
+	height: 45px;
+	width: 45em;
+	margin-bottom: 20px; 
+	border-radius: 4px;
+	border: 1px solid var(--lightTeal);
+	outline:none;
+	padding-left: 10px;
+	color: rgba(0,0,0, .6);
+}
+
+#contact form textarea{
+	height: 55px;
+	width: 46em;
+	margin-bottom: 20px; 
+	border-radius: 4px;
+	border: 1px solid var(--lightTeal);
+	resize: none;
+	outline: none;
+	padding: 10px;
+	color: rgba(0,0,0, .6);
+
+}
+
+#contact form button{
+	text-transform: uppercase;
+	height: 45px;
+	width: 120px;
+	background: var(--orange);
+	border: none;
+	border-radius: 4px;
+	box-shadow: 1px 1px 3px rgba(0,0,0, .6);
+	color: #fff;
+	cursor: pointer;
+}
+
+.round{
+	  	height: 25px;
+  		width: 25px;
+  		border-radius: 50%;
+  		display: inline-block;
+  		margin-inline:10px;
+  		
+
+}
+
+.roundColorBalls{
+		text-align: center;
+  		
+}
+
+#lightTeal{
+	background: var(--lightTeal);
+}
+
+#darkTeal{
+	background: var(--darkTeal);
+}
+
+#orange{
+	background: var(--orange);
+}
+
+#icon{
+	text-align: center;
+	padding-top: 10em;
+	padding-bottom: 5em;
+
+}
+
+#icon a img{
+	margin-inline:10px;
+}
+
+/*I'm about to choke this script with media queries this might not be professional*/
+@media screen and (max-width: 1332px){
+	.skillsGrid{
+	grid-column-gap: 15%;
+}
+}
+
+@media screen and (max-width: 1208px){
+	.skillsGrid{
+	grid-column-gap: 8%;
+}
+}
+
+@media screen and (max-width: 1140px){
+	.skillsGrid{
+	grid-template-columns: auto;
+	}
+	#welcome p{
+	width: 85%;
+}
+
+}
+
+@media screen and (max-width: 840px){
+#img img {
+	width: calc(100% - 10px);
+}
+
+#welcome p{
+	width: 85%;
+	
+}
+
+#welcome h1{
+	font-size: 3.8rem;
+}
+}
+
+@media screen and (max-width: 714px){
+#welcome p{
+	width: 85%;
+	
+}
+
+#welcome h1{
+	font-size: 3.6rem;
+	
+}
+
+/*let's build an icon*/
+.menu{
+	width: 30px;
+	height: 30px;
+	border-radius: 4px;
+	background: rgba(0,0,0, .8);
+	cursor: pointer;
+	margin: 5px;
+	z-index: 10;
+}
+
+.menu div{
+	width: 22px;
+	height: 28px;
+	position: relative;
+	margin: 4px;
+}
+
+.menu span{
+	background: #fff;
+	width: 100%;
+	height: 2px;
+	border-radius: 4px;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: transform .5s, width .5s;
+	
+}
+
+.menu div .line1{
+	transform: translate(-50%, -7px);
+}
+
+.menu div .line3{
+	transform: translate(-50%, 5px);
+}
+/* the openmenu class is used to cross the lines on the icon whenever it is clicked*/
+.openmenu div .line1{
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.openmenu div .line3{
+	transform: translate(-50%, -50%) rotate(45deg);	
+}
+
+.openmenu div .line2{
+	width: 0;
+}
+
+nav ul.Mainmenu{
+	position: absolute;
+	right: 7.5%;
+	top: 65px;
+	width: 50%;
+	height: 100%;
+	background: rgba(255, 255, 255, .8);
+	padding-top: 30px;
+	padding-bottom: 30px;
+	transition: transform 1s ease-in-out;
+	transform: translateX(500px);
+}
+
+/*the show class is added in js to toggle in and out the navigation menu*/
+nav ul.show{
+	transform: translateX(0px);
+	transition: transform .5s ease-in-out;
+}
+
+
+nav ul li{
+	display: block;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	border-bottom: 2px solid rgba(0,0,0, .1)
+	
+}
+
+
+}
+
+@media screen and (max-width: 640px){
+
+#contact{
+	
+	text-align: center;
+}
+#contact form input{
+	width: 100%;
+	
+}
+
+#contact form textarea{
+	width: 31em;
+}
+
+#workGrid{
+	grid-template-columns: auto;
+}
+
+#aboutSection{
+	grid-template-columns: auto;
+	grid-row-gap: 50px;
+	grid-column-gap: 0px;
+}
+
+#welcome p{
+	width: 100%;
+	
+}
+#welcome{
+	margin: 10em 0;
+}
+#welcome h1{
+	font-size: 3rem;
+	
+}
+}
+
+@media screen and (max-width: 538px){
+	.skillBar{
+	width: 350px;
+	
+}
+}
+
+@media screen and (max-width: 412px){
+	.skillBar{
+	width: 300px;
+	
+}
+
+#contact form textarea{
+	width: 25em;
+}
+}
+
+@media screen and (max-width: 350px){
+	.skillBar{
+	width: 250px;
+	
+}
+
+#contact form textarea{
+	width: 20em;
+}
+
+}
